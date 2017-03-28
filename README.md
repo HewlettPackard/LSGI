@@ -12,5 +12,5 @@ vertices as well as the metadata associated with the graph until convergence is 
 Contributors: Fei, Tere, Krishna, Hernan, Janneth
 
 Acknowledgements
-We thank our colleagues Brad Morrey, Terence Kelly, Hideaki Kumura, Jun Li and Rob Schneider for their support understanding memory mappings, libpmem library interfaces, and CPU optimization techniques.  Thanks to Qiong Cai who developed the model to estimate performance on The Machine based on performance on SuperdomeX statistics. Thanks to Greg Pearson and Alex Jizrawi for test and evaluate LSGi on The Machine Fabric Test bed(MFT) and The Machine Simulator(TMAS). Thanks to Ram Swaminathan, April Mitchel and Sharad Singhal for their management support.
+We thank our colleagues Brad Morrey, Terence Kelly, Hideaki Kumura, Jun Li and Rob Schneider for their support understanding memory mappings, libpmem library interfaces, and CPU optimization techniques.  Thanks to Qiong Cai who developed the model to estimate performance on The Machine based on performance on SuperdomeX statistics. Thanks to Greg Pearson and Alex Jizrawi for testing and evaluating LSGi on The Machine Fabric Test bed(MFT) and The Machine Simulator(TMAS). Thanks to Ram Swaminathan, April Mitchel and Sharad Singhal for their management support.
 
