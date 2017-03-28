@@ -2,7 +2,7 @@
 Large Scale Graph inference
 
 We construct an iterative graph processing engine exploiting The Machine’s Fabric-attached-memory as a communication medium, and
-demonstrate near-linear scalability and a 162 speed-up over today’s state of the art graph processing system on a Dragonhawk
+demonstrate near-linear scalability and a 162 speed-up over today’s state of the art graph processing system on a SuperdomeX
 and a projected 85 speed up on the Machine Fabric Testbed (MFT).
 
 The engine takes a graph and associated metadata as input and performs the following computation. Each vertex is
@@ -12,5 +12,5 @@ vertices as well as the metadata associated with the graph until convergence is 
 Contributors: Fei, Tere, Krishna, Hernan, Janneth
 
 Acknowledgements
-We thank our colleagues Brad Morrey, Terence Kelly, Hideaki Kumura and Rob Schneider for their support understanding memory mappings, libpmem library interfaces, and CPU optimization techniques.  Thanks to Qiong Cai who developed the model to estimate performance on The Machine based on performance on Dragonhawk statistics. 
+We thank our colleagues Brad Morrey, Terence Kelly, Hideaki Kumura and Rob Schneider for their support understanding memory mappings, libpmem library interfaces, and CPU optimization techniques.  Thanks to Qiong Cai who developed the model to estimate performance on The Machine based on performance on SuperdomeX statistics. Thanks to Ram Swaminathan, April Mitchel and Sharad Singhal for their management support.
 
