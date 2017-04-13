@@ -1,6 +1,6 @@
 # LSGi
 Large Scale Graph inference
-##Overview
+### Overview
 Iterative graph processing has emerged as a necessary and powerful tool at the heart of solutions to several large scale analytics problems 
 such as malware detection, genome analysis, IoT and online advertising. Due to the large amount of communication involved, iterative graph processing on large graphs does not scale well on distributed systems. 
 To demonstrate the benefits of a memory driven computing architecture, we designed and implemented an iterative graph processing engine 
