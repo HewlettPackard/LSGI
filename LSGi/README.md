@@ -1,6 +1,6 @@
 # LSGi System
 
-![arch](https://github.com/HewlettPackard/LSGI/docs/LSGiSystem.jpg)
+![arch](https://github.com/HewlettPackard/LSGI/blob/master/docs/LSGiSystem.jpg)
 
 # LSGi Package
 The LSGI Package has the following modules:
