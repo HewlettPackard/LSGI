@@ -14,16 +14,17 @@ The engine takes a graph and associated metadata as input and performs the follo
 associated with a state variable. The state variable is updated iteratively based on the states of the neighboring
 vertices as well as the metadata associated with the graph until convergence is achieved.
 
-## Main Contributors 
+### Main Contributors 
 Fei Chen, Tere Gonzalez, Krishna Viswanathan, Hernan Laffite, Quiong Cai, Janneth Rivera
 
-## Acknowledgements
+### Acknowledgements
 We thank our colleagues Brad Morrey, Terence Kelly, Hideaki Kumura, Jun Li and Rob Schneider for their support understanding memory mappings, libpmem library interfaces, and CPU optimization techniques.  Thanks to Qiong Cai who developed the model to estimate performance on The Machine based on performance on SuperdomeX statistics. Thanks to Greg Pearson and Alex Jizrawi for testing and evaluating LSGi on The Machine Fabric Test bed(MFT) and The Machine Simulator(TMAS). Thanks to Ram Swaminathan, April Mitchel and Sharad Singhal for their management support.
 
-## References "Billion node graph inference: iterative processing on The Machine",HPE Techical Report, 2016,
+### References 
+"Billion node graph inference: iterative processing on The Machine",HPE Techical Report, 2016,
 URL:https://www.labs.hpe.com/publications/HPE-2016-101"
 
-## More Info
+### More Info
 - LSGi System Architeture
 - Demo Video
 
