@@ -34,7 +34,7 @@ Fei,Tere, Krishna, Nandish, Hideaki
 Last update: April 10, 2017
  
 ## Requirements
- Before compiling, intall library Dependencies: libpmem,pthread
+ Before compiling, install library Dependencies: libpmem,pthread
  
   To compile use Makefile
   ./make clean
@@ -42,13 +42,13 @@ Last update: April 10, 2017
 
   Main Driver: EngineMain.cpp
 
-## Test and Exectue
+## Test and Execute
   Go to ../../demo/
 
 ## Modules:
 
--InMemoryGraph: Implements the raph Structure in Memory with an optimize Index.
--InferenceConfig: Implements main engine configurations.
--BinaryReader: Implements the graph loading from file to Memory.
--GlobalStates: Implements inference states in DRAM and synchronize to FAM.
--ProcessSync: Implements synchronization barriers accros running computing nodes.
++InMemoryGraph: Implements the raph Structure in Memory with an optimize Index.
++InferenceConfig: Implements main engine configurations.
++BinaryReader: Implements the graph loading from file to Memory.
++GlobalStates: Implements inference states in DRAM and synchronize to FAM.
++ProcessSync: Implements synchronization barriers accros running computing nodes.
