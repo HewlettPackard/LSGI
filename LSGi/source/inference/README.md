@@ -48,7 +48,11 @@ Last update: April 10, 2017
 ## Modules:
 
 +InMemoryGraph: Implements the raph Structure in Memory with an optimize Index.
+
 +InferenceConfig: Implements main engine configurations.
+
 +BinaryReader: Implements the graph loading from file to Memory.
+
 +GlobalStates: Implements inference states in DRAM and synchronize to FAM.
+
 +ProcessSync: Implements synchronization barriers accros running computing nodes.
