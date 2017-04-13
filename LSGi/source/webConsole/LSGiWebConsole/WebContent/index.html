@@ -1,0 +1,86 @@
+
+
+<!doctype html>
+<!--
+/* LSGi Web Console
+“© Copyright 2017  Hewlett Packard Enterprise Development LP
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.”
+*/
+-->
+<html lang="en" xmlns:ng="http://angularjs.org" id="ng-app">
+	<head>
+		<meta charset="utf-8">
+		<title>LSGi on The Machine</title>
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="lib/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">		
+		<link rel="stylesheet" href="css/main-style.css" />
+		<link rel="stylesheet" href="css/app.css" />
+		<link rel="stylesheet" href="css/lsgiViewer.css" />
+		<link rel="stylesheet" href="css/grommet-hpe.min.css" />
+		<link href="img/favicon.ico" type="image/ico" rel="shortcut icon" /> 
+	
+	</head>
+	
+	<body>	
+	
+		<div class="row menu">
+			<div class="col-md-2 col-xs-3 col-centered" style="height: inherit;">
+				<img class="img-responsive" src="img/hpe_pri_grn_rev_rgb.svg">
+			</div>
+			<div class="col-md-8 col-xs-6 col-centered title">
+				LSGi <span>on</span> The Machine
+			</div>
+			<div class="col-md-2 col-xs-3 col-centered" style="height: inherit;">
+				<img class="img-responsive" src="img/hpesm_spec_grn_rev_rgb.svg">
+			</div>
+		</div>
+		
+		<div class="row main-container">
+			<div class="col-md-12" ng-view></div>
+		</div>
+	
+	
+	 		
+		<!-- JS -->		
+		<script src="lib/jquery-1.7.2.js"></script> <!-- test which jquery lib is needed/unneeded -->
+		<script src="lib/jquery-2.0.1.min.js"></script>		
+		<script src="lib/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+		<script src="lib/angular.min.js"></script>		
+		<script src='lib/d3.v3.min.js'></script>
+		<script src="lib/underscore-min.js"></script>
+		<!-- <script src="lib/TweenLite.min.js"></script> -->
+		
+		<script src="js/components/BarChart.js"></script>
+		<script src="js/components/StackedChart.js"></script>
+		<script src="js/components/GaugeChart.js"></script>
+		<script src="js/components/PieChart.js"></script>
+		
+		<script src="js/app.js"></script>		
+		<script src="js/services/LSGiViewerService.js"></script>			
+		<script src="js/controllers/LSGiViewerController.js"></script>			
+		<script src="js/services/LSGiSettingsService.js"></script>	
+		<script src="js/controllers/LSGiSettingsController.js"></script>			
+		
+		
+		<div class="footer">
+			<a href="#/" style="font-weight:bold";>Home</a>
+			<a href="#/settings" style="font-weight:bold;margin-left:10px;">Settings</a>
+			<a href="#/about" style="font-weight:bold;margin-left:10px;">About LSGi</a>
+			<br>
+			<span style="font-weight:bold";>LSGi on The Machine</span> | © 2016 Hewlett Packard Enterprise Development, L.P
+		</div>
+	
+	</body>
+</html>

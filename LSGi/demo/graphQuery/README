@@ -1,0 +1,12 @@
+Graph query services connect to the query service in order to retrieve inference results.
+@author: tere
+@Aug 2016
+We have 3 types of queries:
+1. by vertex Id, retrieves individual vertices info: state, probability, iteration#
+2. by threshold, retrieves informatin of all vertices that satisfy been over the specified probability threshold.
+3. stats by threshold, retrieves the statistics of the vertices that are over the specified probability threshold.
+
+
+@params:
+- vertex id or probabality threshold.
+- port in case there is more than one dataset running, the port is the unique port for the query service. Each dataset can be in memory, but the port for the query service should be different.

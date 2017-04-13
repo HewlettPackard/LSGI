@@ -1,0 +1,19 @@
+@Description:
+Test code to verify that libpmem can update/sync in memory changes for multiple process which are running in separated OS (Vm)
+Dec 2, 2015
+
+@author Tere, Fei, Krishna
+
+@How to compile
+make
+
+@how to test:
+
+1. run the push program to the librarian file:
+
+./test_createUpdatePersistLoop <file> <char initial value to change over iterations> <number of iterations to push updates>
+./test_createUpdatePersistLoop /lfs/file1.txt 4 10
+
+2. run the pull program that print the content of the file after invalidate caches
+./test_pullUpdatesLoop <file> <number of iterations to pull updates>
+./test_pullUpdatesLoop /lfs/file1.txt 4 10

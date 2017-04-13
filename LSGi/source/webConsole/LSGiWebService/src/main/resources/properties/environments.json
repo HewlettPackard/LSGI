@@ -1,0 +1,46 @@
+[{
+        "id": 0,
+        "name": "Superdome X",
+        "hostname": "smaug-1.u.labs.hpecorp.net",
+        "image": "virtual-machine.svg",
+        "lsgi_home": "/home/gomariat/graphs/code/LSGi_BSIM_LOOP/LSGi/LSGi_nolibrarian",
+        "description": "The Superdome X environment has 16 NUMA sockets and 240 cores. LSGi engine runs multiprocesses and uses shared memory(tmpfs) to store shared states for the inference computation. The graphs are loaded in memory and ready to execute the inference.",
+        "availableDatasets": [0,1,2,3],
+        "availableNodes": [4]
+},{
+        "id": 1,
+        "name": "QEMU- 10 Nodes",
+        "hostname": "localhost",
+        "image": "server.svg",
+        "lsgi_home": "/home/gomariat/LSGi/LSGi",
+        "description": "The QEMU environment has 10 virtual machines within a DL-580 box and running L4TM emulating a single enclosure of The Machine.LSGi engine runs one process per node and uses librarian (FAM) as communication medium for global inference states.",
+        "availableDatasets": [3,4],
+        "availableNodes": [0,1,2,3,7]
+},{
+        "id": 2,
+        "name": "Single Node-L4TM",
+        "hostname": "build-l4tm-2.u.labs.hpecorp.net",
+        "image": "Servers.png",
+        "lsgi_home": "/home/gomariat/graphs/code/LSGi",
+        "description": "The l4tm-selfhosted-2 is a single node (DL580) running L4TM and librarian self hosted version.",
+        "availableDatasets": [0,1,2,3,4],
+        "availableNodes": [0,1,2,3,4,5,6]
+},{
+        "id": 3,
+        "name": "TMAS",
+        "hostname": "16.114.166.6",
+        "image": "Servers.png",
+        "lsgi_home": "/home/gomariat/LSGi/LSGi",
+        "description": "TMAS environment configured to run up 40 nodes with L4TM and librarian.",
+        "availableDatasets": [3,4],
+        "availableNodes": [0,1,2,3,4,5,6]
+},{
+        "id": 4,
+        "name": "MFT",
+        "hostname": "build-l4tm-2.u.labs.hpecorp.net",
+        "image": "Servers.png",
+        "lsgi_home": "/home/gomariat/graphs/code/LSGi",
+        "description": "MFT environment to test and run LSGi in the real hardware.",
+        "availableDatasets": [0,1,2,3,4],
+        "availableNodes": [0,1,2,3,4,5,6]
+}]

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#FFFFFF;}
+	.st2{display:inline;fill:none;stroke:#D1D3D4;stroke-width:0.25;stroke-miterlimit:10;}
+	.st3{display:inline;fill:none;stroke:#D1D2D3;stroke-width:0.25;stroke-miterlimit:10;}
+	.st4{display:inline;}
+	.st5{fill:#FFFFFF;}
+	.st6{fill:#00B388;}
+</style>
+<g id="white_bkgd_-_TURN_OFF" class="st0">
+	<rect x="-17" y="-17" class="st1" width="70" height="70"/>
+</g>
+<g id="Grid_-_TURN_OFF" class="st0">
+	<rect x="0.112305" y="0.112305" class="st2" width="35.7753944" height="35.7753944"/>
+	<line class="st2" x1="35.8876991" y1="31.9120998" x2="0.112305" y2="31.9120998"/>
+	<line class="st2" x1="35.8876991" y1="27.9375" x2="0.112305" y2="27.9375"/>
+	<line class="st2" x1="35.8876991" y1="23.9629002" x2="0.112305" y2="23.9629002"/>
+	<line class="st2" x1="35.8876991" y1="19.9873009" x2="0.112305" y2="19.9873009"/>
+	<line class="st2" x1="35.8876991" y1="16.0126991" x2="0.112305" y2="16.0126991"/>
+	<line class="st2" x1="35.8876991" y1="12.0375996" x2="0.112305" y2="12.0375996"/>
+	<line class="st2" x1="35.8876991" y1="8.0625" x2="0.112305" y2="8.0625"/>
+	<line class="st2" x1="35.8876991" y1="4.0874" x2="0.112305" y2="4.0874"/>
+	<line class="st2" x1="4.0874" y1="35.8876991" x2="4.0874" y2="0.112305"/>
+	<line class="st2" x1="8.0625" y1="35.8876991" x2="8.0625" y2="0.112305"/>
+	<line class="st2" x1="12.0375996" y1="35.8876991" x2="12.0375996" y2="0.112305"/>
+	<line class="st2" x1="16.0126991" y1="35.8876991" x2="16.0126991" y2="0.112305"/>
+	<line class="st2" x1="19.9873009" y1="35.8876991" x2="19.9873009" y2="0.112305"/>
+	<line class="st2" x1="23.9629002" y1="35.8876991" x2="23.9629002" y2="0.112305"/>
+	<line class="st2" x1="27.9375" y1="35.8876991" x2="27.9375" y2="0.112305"/>
+	<line class="st2" x1="31.9120998" y1="35.8876991" x2="31.9120998" y2="0.112305"/>
+	<rect x="-39.6001015" y="-39.6001015" class="st3" width="115.1996994" height="115.1996994"/>
+</g>
+<g id="Title_-_TURN_OFF" class="st0">
+	<rect x="-13.7084999" y="44.8280983" style="display:inline;fill:none;" width="63.4165001" height="7.5907998"/>
+	<text transform="matrix(1 0 0 1 6.5400391 50.0288048)" class="st4"><tspan x="0" y="0" style="font-family:'Metric-Regular'; font-size:8px;">S</tspan><tspan x="3.8881836" y="0" style="font-family:'Metric-Regular'; font-size:8px;">er</tspan><tspan x="10.0561523" y="0" style="font-family:'Metric-Regular'; font-size:8px;">v</tspan><tspan x="13.6318359" y="0" style="font-family:'Metric-Regular'; font-size:8px;">e</tspan><tspan x="17.2319336" y="0" style="font-family:'Metric-Regular'; font-size:8px;">r</tspan><tspan x="19.7758789" y="0" style="font-family:'Metric-Regular'; font-size:8px;">s</tspan></text>
+</g>
+<g id="_x31__Color_Icon">
+	<g>
+		<path class="st5" d="M36,35H0V25h36V35z M2,33h32v-6H2V33z"/>
+		<rect x="9" y="29" class="st5" width="23" height="2"/>
+		<rect x="4" y="29" class="st5" width="2" height="2"/>
+		<path class="st5" d="M36,23H0V13h36V23z M2,21h32v-6H2V21z"/>
+		<rect x="9" y="17" class="st5" width="23" height="2"/>
+		<rect x="4" y="17" class="st5" width="2" height="2"/>
+		<path class="st6" d="M36,11H0V1h36V11z M2,9h32V3H2V9z"/>
+		<rect x="9" y="5" class="st6" width="23" height="2"/>
+		<rect x="4" y="5" class="st6" width="2" height="2"/>
+	</g>
+</g>
+<g id="_x32__Color_Icon" class="st0">
+	<g class="st4">
+		<path d="M36,35H0V25h36V35z M2,33h32v-6H2V33z"/>
+		<rect x="9" y="29" width="23" height="2"/>
+		<rect x="4" y="29" width="2" height="2"/>
+		<path d="M36,23H0V13h36V23z M2,21h32v-6H2V21z"/>
+		<rect x="9" y="17" width="23" height="2"/>
+		<rect x="4" y="17" width="2" height="2"/>
+		<g>
+			<path class="st6" d="M36,11H0V1h36V11z M2,9h32V3H2V9z"/>
+			<rect x="9" y="5" class="st6" width="23" height="2"/>
+			<rect x="4" y="5" class="st6" width="2" height="2"/>
+		</g>
+	</g>
+</g>
+<g id="_x31_C_EMF_Icon" class="st0">
+	<g class="st4">
+		<path class="st5" d="M75.5996017,72.4003983h-115.199707v-32h115.199707V72.4003983z M-33.2001991,66H69.2002029V46.7998009
+			H-33.2001991V66z"/>
+		<rect x="-10.7997999" y="53.2001991" class="st5" width="73.5996017" height="6.3994002"/>
+		<rect x="-26.7998009" y="53.2001991" class="st5" width="6.3999" height="6.3994002"/>
+		<path class="st5" d="M75.5996017,34h-115.199707V2h115.199707V34z M-33.2001991,27.5995998H69.2002029V8.3999004H-33.2001991
+			V27.5995998z"/>
+		<rect x="-10.7997999" y="14.7997999" class="st5" width="73.5996017" height="6.4004002"/>
+		<rect x="-26.7998009" y="14.7997999" class="st5" width="6.3999" height="6.4004002"/>
+		<path class="st6" d="M75.5996017-4.3999h-115.199707v-31.9999981h115.199707V-4.3999z M-33.2001991-10.7997999H69.2002029V-30
+			H-33.2001991V-10.7997999z"/>
+		<rect x="-10.7997999" y="-23.6000996" class="st6" width="73.5996017" height="6.3999"/>
+		<rect x="-26.7998009" y="-23.6000996" class="st6" width="6.3999" height="6.3999"/>
+	</g>
+</g>
+<g id="_x32_C_EMF_Icon" class="st0">
+	<g class="st4">
+		<path d="M75.5996017,72.4003983h-115.199707v-32h115.199707V72.4003983z M-33.2001991,66H69.2002029V46.7998009H-33.2001991V66z"
+			/>
+		<rect x="-10.7997999" y="53.2001991" width="73.5996017" height="6.3994002"/>
+		<rect x="-26.7998009" y="53.2001991" width="6.3999" height="6.3994002"/>
+		<path d="M75.5996017,34h-115.199707V2h115.199707V34z M-33.2001991,27.5995998H69.2002029V8.3999004H-33.2001991V27.5995998z"/>
+		<rect x="-10.7997999" y="14.7997999" width="73.5996017" height="6.4004002"/>
+		<rect x="-26.7998009" y="14.7997999" width="6.3999" height="6.4004002"/>
+		<g>
+			<path class="st6" d="M75.5996017-4.3999h-115.199707v-31.9999981h115.199707V-4.3999z M-33.2001991-10.7997999H69.2002029V-30
+				H-33.2001991V-10.7997999z"/>
+			<rect x="-10.7997999" y="-23.6000996" class="st6" width="73.5996017" height="6.3999"/>
+			<rect x="-26.7998009" y="-23.6000996" class="st6" width="6.3999" height="6.3999"/>
+		</g>
+	</g>
+</g>
+</svg>

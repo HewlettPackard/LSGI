@@ -1,0 +1,34 @@
+1.	Running a LSGi Job
+
+In order to run a job, the LSGi package includes a folder “demo/inference”. This folder includes a set of scripts that allow run a inference job, track or kill them.
+Despite there are several related scripts customized to specific dataset, the main script to run the inference over multiple dataset and nodes is:
+launchMultiNodeDemo.sh: 
+@Description:
+Launch processes in each node listed on hostfile. The script connects to the nodes via ssh and run the inference program in each of them. The script also launch the query service that will retrieve states information for the query client.
+
+@Params: 
+<N> Number of process to launch (MAX)
+<dataset> Dataset path to run.
+<port> QueryService TCPI/IP port for accepting query  request. (Optional, default 58000)
+
+@Requirements:
+1. Make sure 'hosts' file is updated with the list (name or IP) of connected nodes.
+2. Make sure the dataset file has the related files require to run: binary graph, labels and partitions. See section 1 of this document.
+
+@How to run it: 
+Command line: ./launchMultiNodeDemo.sh <N> <dataset> <port>
+For example:
+1)	Using default QS port: 
+./launchMultiNodeDemo.sh 2 ../../data/inputGraphs/dns_graph.alchemy.factors.bin
+
+This line runs 2 nodes for the dns_graph.alchemy.factors.bin. The query service for this dataset will start at default port.(58000)
+
+2)	Using custom QS port: 
+./launchMultiNodeDemo.sh 2 ../../data/inputGraphs/dns_graph.alchemy.factors.bin 580003
+
+This line runs 2 nodes for the dns_graph.alchemy.factors.bin. The query service will start at the port 58000.
+
+Note. The script has another variable to define if the shared states will be stored on /dev/shm or /lfs/ or other file system. The default file system is /lfs/. To change the location of shared states, update the script in the variable $SharedFileSystem.
+
+For other scripts like job status, kill job or check progress, you can see how to run it from the scripts.
+

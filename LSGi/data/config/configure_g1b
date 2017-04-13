@@ -1,0 +1,2 @@
+#Threads,#samples,outputFilename,numasocketsTouse(1;2),#SamplesSnapshop,threshold
+16,1000,../../data/outputStats/outg1b2,1,100,0.03

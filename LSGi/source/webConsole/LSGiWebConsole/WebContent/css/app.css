@@ -1,0 +1,96 @@
+/* app css stylesheet */
+.al-cont{
+  width: 1000px;
+  padding: 15px;
+}
+
+.al{
+  padding: 10px 15px;
+}
+
+.al-name{
+  background-color: #244170;
+  color: #FEFEFE;
+  font-weight: lighter;
+  text-align: center;
+  
+}
+
+.al-name img{
+  height: 50px;
+  margin: 10px auto;
+}
+
+.al-desc{
+  background-color: #fefefe;
+}
+
+.al-select{
+  text-align: center;
+  float: right;
+}
+
+.color1{
+  background-color: #34495e;
+}
+
+.color2{
+  background-color: #9b59b6;
+}
+
+.color3{
+  background-color: #3498db;
+}
+
+.color4{
+  background-color: #1abc9c;
+}
+
+.color5{
+  background-color: #f39c12;
+}
+
+.operatorNameSquare{
+  margin-left: 10%;
+  display: inline-block;
+}
+
+.inputsBox{
+  padding: 10px 15px;
+}
+
+.instanceHeader{
+  margin-left: 35px;
+}
+
+.titleEditInput{
+ 	/* padding: 15px 10px; !important;   */
+ 	/* NOTE: "!important" does NOT work in firefox */ 
+  font-weight: bolder;
+}
+
+.inputOptions button{
+  float: right;
+}
+
+.editableText{
+  display: inline-block;
+}
+
+.editLink{
+  font-size: 14px;
+}
+
+.editLink:hover, .editLink:active{
+  cursor: pointer;
+}
+
+.userinfo{
+	padding-right:15px; 
+	padding-top:15px; 
+	float: right
+}
+
+.userinfo span{
+	color: #FFFFFF;
+}

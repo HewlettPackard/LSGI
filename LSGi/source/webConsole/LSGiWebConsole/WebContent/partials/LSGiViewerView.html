@@ -1,0 +1,349 @@
+<!--<div class="white-box inputsBox">
+	<div class="container-fluid">			-->
+
+			<!-- User inputs row -->
+			<div id="inputDiv" class="row row-centered">
+
+				<!-- Nav -->
+				<div id="inputBoxes" class="col-md-10 nav" ng-init="inputTab=1">
+					<div class="col-md-4" ng-mouseenter="inputBox1Hovering=true" ng-mouseleave="inputBox1Hovering=false" 
+							 ng-class="{ 'darkBox': inputBox1Hovering}">
+						<div ng-class="{ active: inputTab == 1}" ng-click="inputTab = !showStopBtn && 1" style="padding-top:15px;">
+							 
+								<img class="img-responsive col-centered" ng-src="{{inputBox1Hovering && 'img/Servers_white.svg' || 'img/Servers_black.svg'}}" alt="">
+								<div class="caption">Execution Environment: <h3>{{selectedEnvironment.name}}</h3></div>
+						</div>
+					</div>
+					<div class="col-md-4" ng-mouseenter="inputBox2Hovering=true" ng-mouseleave="inputBox2Hovering=false" 
+							 ng-class="{ 'darkBox': inputBox2Hovering}">
+						<div ng-class="{ active: inputTab == 2}" ng-click="inputTab = !showStopBtn && 2 " style="padding-top:15px;">
+							 
+								<img class="img-responsive col-centered" ng-src="{{inputBox2Hovering && 'img/Big_data_white.svg' || 'img/Big_data_black.svg'}}" alt="">
+								<div class="caption">Graph: <h3>{{selectedDataset.name}}</h3></div>
+						</div>
+					</div>
+					<div class="col-md-4" ng-mouseenter="inputBox3Hovering=true" ng-mouseleave="inputBox3Hovering=false" 
+							 ng-class="{ 'darkBox': inputBox3Hovering}">
+						<div ng-class="{ active: inputTab == 3}" ng-click="inputTab = !showStopBtn && 3 " style="padding-top:15px;">
+							 
+								<img class="img-responsive col-centered" ng-src="{{inputBox3Hovering && 'img/Infrastructure_white.svg' || 'img/Infrastructure_black.svg'}}" alt="">
+								<div class="caption">Nodes: <h3>{{selectedNodes.value}}</h3></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Execution Environment -->
+				<div id="environmentDiv" class="col-md-10" ng-show="inputTab==1">
+					<div id="environmentCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+
+							<ol class="carousel-indicators">
+	            				<li ng-repeat="environment in environments" data-target="#environmentCarousel" data-slide-to="{{$index}}" ng-class="{'active': $first}"></li>
+	        				</ol>
+
+							<div class="carousel-inner" role="listbox">
+								<!--Execution Environment:-->
+								<div class="item" ng-repeat="environment in environments" ng-class="{'active' : $first}">
+										<div class="col-md-3 image-wrapper">
+											<img ng-src="img/{{environment.image}}" alt="">
+											<div class="caption">{{environment.name}}</div>
+										</div>
+										<div class="col-md-6 description">
+											{{environment.description}}
+										</div>										
+										<div class="col-md-3">
+											<button ng-click="selectEnvironment($index);" class="button" style>Select</button>
+										</div>
+							  </div>
+							</div>
+
+					  	<a class="left carousel-control" href="#environmentCarousel" role="button" data-slide="prev">
+						    <div class="arrow"></div><!--<img class="img-responsive" ng-src="img/Previous.png" alt="">-->
+					    	<span class="sr-only">Previous</span>
+					  	</a>
+
+					  	<a class="right carousel-control" href="#environmentCarousel" role="button" data-slide="next">
+						    <div class="arrow"></div><!--<img class="img-responsive" ng-src="img/Next.png" alt="">-->
+					    	<span class="sr-only">Next</span>
+					  	</a>
+
+					</div>
+			 	</div>
+
+			 	<!-- Dataset -->
+			 	<div id="datasetDiv" class="col-md-10" ng-show="inputTab==2" >
+			 		<div id="datasetCarousel" class="carousel slide" data-ride="carousel" data-interval="false" >
+
+							<ol class="carousel-indicators">
+	        				<li ng-repeat="dataset in availableDatasets" data-target="#datasetCarousel" data-slide-to="{{$index}}" ng-class="{'active': $first }"></li>
+	    				</ol>
+
+							<div class="carousel-inner" role="listbox">
+								<!--Dataset:-->
+							  	<div class="item" ng-repeat="dataset in availableDatasets" ng-class="{ 'active':$first }">
+										<div class="col-md-3 image-wrapper">
+											<img ng-src="img/{{dataset.image}}" alt="">
+											<div class="caption">{{dataset.name}}</div>
+										</div>
+										<div class="col-md-6 description">
+											{{dataset.description}}
+										</div>
+										<div class="col-md-3">
+											<button ng-click="selectDataset($index);" class="button" style>Select</button>
+										</div>
+							  	</div>
+							</div>
+
+					  	<a class="left carousel-control" href="#datasetCarousel" role="button" data-slide="prev">
+						    <div class="arrow"></div><!--<img class="img-responsive" ng-src="img/Previous.png" alt="">-->
+					    	<span class="sr-only">Previous</span>
+					  	</a>
+
+					  	<a class="right carousel-control" href="#datasetCarousel" role="button" data-slide="next">
+						    <div class="arrow"></div><!--<img class="img-responsive" ng-src="img/Next.png" alt="">-->
+					    	<span class="sr-only">Next</span>
+					  	</a>
+
+					</div>
+			 	</div>
+
+			 	<!-- Nodes -->
+			 	<div id="nodesDiv" class="col-md-10" ng-show="inputTab==3">
+			 		<div id="nodesCarousel" class="carousel slide" data-ride="carousel" data-interval="false" >
+
+							<ol class="carousel-indicators">
+	            		<li ng-repeat="node in availableNodes" data-target="#nodesCarousel" data-slide-to="{{$index}}" ng-class="{'active': $first}"></li>
+	        		</ol>
+
+							<div class="carousel-inner" role="listbox">
+								<!--Nodes:-->
+							  	<div class="item" ng-repeat="node in availableNodes" ng-class="{ 'active' : $first }">
+										<div class="col-md-3 image-wrapper">
+											<img class="img-responsive col-centered" ng-src="img/{{node.image}}" alt="">
+											<div class="caption">{{node.name}}</div>
+										</div>
+										<div class="col-md-6 description">
+											{{node.description}}
+										</div>
+										<div class="col-md-3">
+											<button ng-click="selectNodes($index);" class="button" style>Select</button>
+										</div>
+							  	</div>
+							</div>
+
+					  	<a class="left carousel-control" href="#nodesCarousel" role="button" data-slide="prev">
+						    <div class="arrow"></div><!--<img class="img-responsive" ng-src="img/Previous.png" alt="">-->
+					    	<span class="sr-only">Previous</span>
+					  	</a>
+
+					  	<a class="right carousel-control" href="#nodesCarousel" role="button" data-slide="next">
+						    <div class="arrow"></div><!--<img class="img-responsive" ng-src="img/Next.png" alt="">-->
+					    	<span class="sr-only">Next</span>
+					  	</a>
+
+					</div>
+			 	</div>
+			 	
+			 	
+			 	<div id="buttonsDiv" class="col-md-10" ng-show="inputTab">
+					<button ng-click="launch()" class="button button--primary">Launch</button>
+					<button ng-click="query()" class="button button--primary">Query</button>
+				</div>			
+
+			</div><!-- End User inputs row -->
+
+			<br>
+					
+		  	<!-- Loading & Graph Stats row ng-show="iteration<=0"-->
+		  	<div id="loadingDiv" ng-show="showGraphStats" class="row row-centered">
+		  		<!-- Loading icon -->
+		  		<!-- <div>
+					<svg class="icon-spinning" viewBox="0 0 48 48" version="1.1" role="img">
+						<title>Spinning</title>					
+						<circle stroke="#ddd" stroke-width="4" stroke-dasharray="24px 8px" fill="none" cx="24" cy="24" r="20"></circle>
+						<circle stroke="#333" stroke-width="4" stroke-dasharray="24px 104px" fill="none" cx="24" cy="24" r="20"></circle>
+					</svg>
+					<div style="font-size: 1.2rem;">{{jobStatus}}</div>
+				</div> -->
+				
+				<!-- Graph Stats -->
+				<div id="statisticsDiv"  class="col-md-12 nav">					 	 		
+					<div class="col-md-6 col-centered statsBox darkBox">					 	
+					 	<div class="row">
+					 		<img class="col-md-12 col-centered img-responsive" ng-src="img/Networking_white.svg" alt="">Graph Description</>
+						</div>
+						
+						<hr style="border-color: #FF8D6D;margin-bottom: 10px;"> 
+						
+						<div class="row">
+							<div class="col-md-5 col-centered">Vertices:</div>
+							<div class="col-md-5 col-centered number 1">{{vertices}}</div>
+							<div class="col-md-2 col-centered"></div>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-5 col-centered">Edges:</div>
+							<div class="col-md-5 col-centered number 2">{{edges}}</div>
+							<div class="col-md-2 col-centered"></div>
+						</div>
+		
+						<div class="row">
+							<div class="col-md-5 col-centered">Known Vertices with State 0:</div>
+							<div class="col-md-5 col-centered number 3">{{s0}}</div>
+							<div class="col-md-2 col-centered">({{s0Percent}}%)</div>
+						</div>
+		
+						<div class="row">
+							<div class="col-md-5 col-centered">Known Vertices with State 1:</div>
+							<div class="col-md-5 col-centered number 4">{{s1}}</div>
+							<div class="col-md-2 col-centered">({{s1Percent}}%)</div>
+						</div>
+					</div>				
+				</div><!-- End Statistics row -->				
+			</div><!-- End Loading & Stats  -->		
+			
+			<br>
+			
+			<!-- Alert messages -->
+			<div id="infoMsg" class="row row-centered alert alert-warning" role="alert" style="font-size:1.2rem;display:none;">
+				{{infoMsgText}}
+			</div>
+			<div id="errorMsg" class="row row-centered alert alert-danger" role="alert" style="font-size:1.2rem;display:none;">
+				{{errorMsgText}}
+			</div> 
+							
+		    <!-- Inference Progress row -->
+			<div id="progressDiv" class="row" ng-show="showResults" style="background-color: #F6F6F6;">		  		
+
+				<!-- Summary row -->
+				<div id="summary" class="col-md-12" style="font-size: 1rem;">
+				
+					<div style="height: 2.5rem;margin-top: 15px;"><!-- class="col-md-12" -->
+						<div class="col-md-1 col-xs-2 col-centered" style="font-size: 1.4rem;font-weight: bold;">Summary</div>	
+						<div class="col-md-10 col-centered row-centered">Iteration: <span style="font-size:2rem">[ {{convergenceData[convergenceData.length-1].iteration}} ]</span></div>											
+					</div>
+					
+					<!-- Inference Stats boxes -->
+					<div id="boxesDiv" class="col-md-12 nav" style="padding-left: 15px;padding-bottom:15px;margin-bottom:15px;border-bottom: 1px solid #ededed;">
+						
+						<!-- Box 1 -->
+						<div class="col-md-2 resultBox" ng-mouseenter="box1Hovering=true" ng-mouseleave="box1Hovering=false" 
+							 ng-class="{ 'col-md-offset-1': selectedEnvironment.name=='Superdome X' && selectedNodes.value=='16', 
+							 			'col-md-offset-3': selectedEnvironment.name!='Superdome X' || selectedNodes.value!='16', 
+							 			'darkBox': box1Hovering}" >
+							<div class="row">
+								<img class="col-md-5 col-centered img-responsive" ng-src="{{box1Hovering && 'img/Clock_alarm_white.svg' || 'img/Clock_alarm_black.svg'}}" alt="">
+								<div class="col-md-7 col-centered titleText">LSGi</div>
+							</div>							
+							<div class="row resText">{{currTimeStr}}</div>							
+						</div>
+						
+						<!-- Box 2 -->
+						<div class="col-md-2 resultBox" ng-show="selectedEnvironment.name=='Superdome X' && selectedNodes.value=='16'"
+							 ng-mouseenter="box2Hovering=true" ng-mouseleave="box2Hovering=false" 
+							 ng-class="{ 'darkBox': box2Hovering}">
+							<div class="row">
+								<img class="col-md-5 col-centered img-responsive" ng-src="{{box2Hovering && 'img/In_progress_white.svg' || 'img/In_progress_black.svg'}}" alt="">
+								<div class="col-md-7 col-centered titleText">GraphLab</div>
+							</div>							
+							<div class="row" ng-show="graphlabTime>=0">
+								<div class="col-md-9 col-centered resText" style="padding-bottom: 5px;padding-top: 1.5rem;">{{graphlabTimeStr}}</div>
+								<svg version="1.1" viewBox="0 -10 35 35" role="img" class="control-icon control-icon-link-up" style="stroke: #F04953;fill: #F04953;" aria-labelledby="link-up-title"><title id="link-up-title"><span id="link-up">link-up</span></title><g><rect x="0" y="0" fill="none" width="24" height="24"></rect><path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M4,10.9448l8-8l8,8 M12,21.9448v-19"></path></g></svg>
+								<!-- <img class="col-md-3 col-centered img-responsive" ng-src="{{box2Hovering && 'img/Up_link_white.svg' || 'img/Up_link_black.svg'}}" style="min-height: 40px;" alt="">-->
+							</div>
+							<div class="row" ng-show="graphlabTime<0">
+								<div class="col-md-9 col-centered resText" style="padding-bottom: 5px;padding-top: 1.5rem;">failed</div>
+								<svg class="col-md-3 col-centered status-icon-error" style="padding-top: 1.5rem;" viewBox="0 0 24 24" aria-labelledby="critical-title" role="img" version="1.1"><title id="critical-title"><span id="critical">critical</span></title><g class="status-icon__base" stroke="none"><path role="presentation" d="M12,0 L24,12 L12,24 L0,12 Z"></path></g><g class="status-icon__detail" fill="none"><path role="presentation" d="M8,8 L16,16" stroke-width="2"></path><path role="presentation" d="M8,16 L16,8" stroke-width="2"></path></g></svg>
+							</div>							
+						</div>
+						
+						<!-- Box 3 -->
+						<div class="col-md-2 resultBox" ng-show="selectedEnvironment.name=='Superdome X' && selectedNodes.value=='16'"
+							 ng-mouseenter="box3Hovering=true" ng-mouseleave="box3Hovering=false" 
+							 ng-class="{ 'darkBox': box3Hovering}">
+							<div class="row">
+								<img class="col-md-5 col-centered img-responsive" ng-src="{{box3Hovering && 'img/Energy_savings_white.svg' || 'img/Energy_savings_black.svg'}}" alt="">
+								<div class="col-md-7 col-centered titleText">SpeedUp</div>
+							</div>							
+							<div class="row resText" ng-show="graphlabTime>0">{{speedup}}x</div>
+							<div class="row resText" ng-show="graphlabTime<=0">--</div>						
+						</div>
+						
+						<!-- Box 4 -->
+						<div class="col-md-2 resultBox" ng-mouseenter="box4Hovering=true" ng-mouseleave="box4Hovering=false" 
+							 ng-class="{ 'darkBox': box4Hovering}">
+							<div class="row">
+									<img class="col-md-5 col-centered img-responsive" ng-src="{{box4Hovering && 'img/Performance_white.svg' || 'img/Performance_black.svg'}}" alt="">
+									<div class="col-md-7 col-centered titleText">Convergence</div>
+								 </div>
+								 <div class="row resText">{{convergence}}%</div>							
+						</div>
+					
+						<!-- Box 5 -->
+						<div class="col-md-2 resultBox" ng-mouseenter="box5Hovering=true" ng-mouseleave="box5Hovering=false" 
+							 ng-class="{ 'darkBox': box5Hovering}">
+							<div class="row">
+								<img class="col-md-3 img-responsive" ng-src="{{box5Hovering && 'img/Analytics_white.svg' || 'img/Analytics_black.svg'}}" alt="">
+								<div class="col-md-9 col-centered titleText">Inference State0</div> 
+							</div>
+							<div class="row resText">{{inferencePercentage}}%</div>	
+						</div>	
+					</div>
+				</div><!-- End summary row -->			
+				
+				
+				<!-- Charts row -->
+				
+				<!-- State Chart row -->				
+				<div class="col-md-12"> 
+					<div class="col-md-1 col-xs-2" style="font-size: 1.4rem;font-weight: bold;">States</div>
+					<div class="col-md-11">
+						<div class="col-md-2 col-xs-4">
+							<div class="stateChartlegend state0"></div>State0
+						</div>
+						<div class="col-md-2 col-xs-4">
+							<div class="stateChartlegend state1"></div>State1
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12"> 
+					<div class="col-md-12 col-xs-12" id="stateChart"></div>
+					<div style="text-align:center">Iteration</div>
+					<!-- </div> -->
+				</div><!-- End stacked chart row -->
+
+			    <!-- Convergence Chart row -->
+				<div class="col-md-12"> 
+					<div class="col-md-2" style="font-size: 1.4rem;font-weight: bold;">Convergence (%)</div>
+				</div>
+				<div class="col-md-12 col-xs-12">						
+					<div class="col-md-12" id="convergenceChart"></div>
+					<div style="text-align:center">Iteration</div>				
+			  	</div><!-- End chart row -->
+
+		  		<br/>
+		  	</div><!-- End Inference Progress row -->
+
+			<br>
+			
+		  	<!-- Inference Results row -->
+			<div id="resultsDiv" class="row" ng-show="showResults">
+				<div class="row">					
+					<div class="col-md-1" ng-show="showStopBtn" style="padding-left: 0;margin-bottom: 1rem;">
+						<button ng-click="stop()" class="button button--primary">Stop</button>
+					</div>					
+					<!-- Probability -->
+					<div class="col-md-11" style="text-align: right;">Convergence Threshold:
+		 				<input type="number" ng-model="probability" min="0" max="100" ng-show="searchType==1" required>
+						<button type="button" ng-click="probability=probability-1" ng-disabled="probability==0" class="col-centered" style="border: none;padding: 0;width: 30px;height: 30px;min-width: 0;max-width: none;font-weight: inherit;">
+								<img class="img-responsive" ng-src="img/Subtract.png" alt="">
+						</button>
+						<button type="button" ng-click="probability=probability+1" ng-disabled="probability==100" class="col-centered" style="border: none;padding: 0;width: 30px;height: 30px;min-width: 0;max-width: none;font-weight: inherit;">
+								<img class="img-responsive" ng-src="img/Add.png" alt="">
+						</button>
+					</div><!-- Probability-->	
+				</div>			   
+		</div><!-- End Inference Results row -->
+
+
+<!--	</div>
+</div>-->

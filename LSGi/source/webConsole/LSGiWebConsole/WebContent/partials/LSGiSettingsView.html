@@ -1,0 +1,43 @@
+<div id="settingsDiv" class="row row-centered" style="margin-top:1rem;">
+	<div class="row">
+		<div class="col-md-6 col-centered">
+			<h3>To change configuration: edit JSON values or add/remove elements.</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-xs-4 col-centered">		
+			<label for="singleSelect"> Select configuration file: </label>		
+	
+		    <select name="configFileSelect" ng-model="selectedFileName" ng-change="reset()" style="line-height: 1.1;">
+		      <option value="">---Please select---</option>
+		      <option value="environments.json">environments.json</option>
+		      <option value="datasets.json">datasets.json</option>
+		      <option value="nodes.json">nodes.json</option>
+		    </select>					
+		
+			<button ng-click="load()" class="button button--primary" ng-disabled="selectedFileName=='' || selectedFileName==null">Load</button>	
+		</div>
+	</div>
+				
+	<br>
+		
+	<div class="row" ng-show="showContent">
+		<div class="col-md-10 col-xs-12 col-centered">	
+			<textarea ng-model="jsonFile" class="json" ></textarea>					
+		</div>
+		<div class="col-md-2 col-md-offset-9 col-centered">
+			<button ng-click="save()" class="button button--primary">Save</button>	
+		</div>
+	</div>	
+	
+	<br>
+	
+	<!-- Alert messages -->
+	<div id="infoMsg" class="row row-centered alert alert-warning" role="alert" style="font-size:1.2rem;display:none;">
+		{{infoMsgText}}
+	</div>
+	<div id="errorMsg" class="row row-centered alert alert-danger" role="alert" style="font-size:1.2rem;display:none;">
+		{{errorMsgText}}
+	</div> 
+	
+</div>

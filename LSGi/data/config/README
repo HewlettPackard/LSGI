@@ -1,0 +1,36 @@
+README
+
+This folder contains the input configuration for the inference. The filename is passed a parameter for the inference program: ./gibbsApp <config_file> <input_graph> ...
+
+Example of the configuration file:
+
+filename: configure_dns
+
+
+#Threads,#samples,outputFilename,numasocketsTouse(1;2),#SamplesSnapshop,threshold
+1,100,../../data/outputStats/outgdns,1,10,0.03
+
+
+Description:
+This configuration file will configure the engine with:
+ 1 threads, 100 iterations, ../../data/outputStats/outgdns is the output file, uses 1 socket, convergence test every 10 iterations, and convergence threshold of 0.03.
+
+
+
+The list of parameters are:
+
+1. #Threads: Number of threads to use for inference processing. The work is evenly partitioned by the number of threads for each process.
+
+2. #samples: Number of iterations to run. For benchmark we use 100.
+
+3. outputFilename: Filename and path for the local ouput files, the filename is used as
+
+4. numasocketsTouse(1): This parameters should set ALWAYS to 1.
+
+5. #SamplesSnapshop: Number of iterations to test convergence of the graph/
+
+6. threshold: Threshold to verify if the vertex has convergence. We use (0.03 <=) to decide if the vertex id has converge.
+
+
+Author:Tere
+July 2016

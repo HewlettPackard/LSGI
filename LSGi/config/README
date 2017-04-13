@@ -1,0 +1,6 @@
+This folder contains scripts to configure LSGi Engine, including ssh passworless bewteen nodes, copy source code to remote nodes, and compile the code.
+
+The configuration uses relative paths assuming this deployment package as it is.
+@Author
+Tere, Janneth
+July 2016

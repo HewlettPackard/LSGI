@@ -1,0 +1,51 @@
+#@Description: Deploy LSGi package from localhost to remote hosts
+#@Parameters:
+#   <ANSIBLE_INVENTORY>
+#   <ANSIBLE_GROUP>
+#   <LSGI_PATH>
+#@Requirements:
+#   Edit 'ansible_hosts' file with the remote hostnames before running this playbook
+#@Authors: Janneth Rivera, Tere Gonzalez
+#@Date: June 24 2016
+#@How to run it: ansible-playbook deploy.yml -i <ANSIBLE_INVENTORY> --extra-vars "ANSIBLE_GROUP=$(ANSIBLE_GROUP) LSGI_PATH=$(LSGI_PATH)"
+#   For example: ansible-playbook deploy.yml -i ./ansible_hosts --extra-vars "ANSIBLE_GROUP=lsgi_nodes LSGI_PATH=../.."
+
+---
+- hosts: "{{ANSIBLE_GROUP}}"
+  vars:
+    LSGI_HOME: "{{LSGI_PATH}}/LSGi"
+    BACKUP_DIR_NAME: "LSGi_backup_{{ ansible_date_time.date }}"
+
+  vars_prompt:
+
+  #Ask input from user, whether to overwrite or create a backup when package already exists in remote hosts
+  - name: "overwrite"
+    prompt: If package already exists in remote hosts, would you like to overwrite? (Y/N)
+               Y= Deletes before copying    N= Creates a backup before copying
+    private: no
+
+  tasks:
+
+  - name: Checking if <<{{LSGI_HOME}}>> exists...
+    stat: path={{LSGI_HOME}}
+    register: pkg_status
+
+  - name: if <<{{LSGI_HOME}}>> is present in node, delete before copying
+    file: path={{LSGI_HOME}} state=absent
+    when: pkg_status.stat.exists and
+            ( overwrite=='Y' or overwrite=='y')
+
+  - name: if <<{{LSGI_HOME}}>> is present in node, create backup directory before copying
+    file: path=./{{BACKUP_DIR_NAME}}/ state=directory
+    when: pkg_status.stat.exists and
+            not ( overwrite=='Y' or overwrite=='y')
+
+  - name: Moving to backup directory...
+    command: mv {{LSGI_HOME}} ./{{BACKUP_DIR_NAME}}/
+    when: pkg_status.stat.exists and
+            not ( overwrite=='Y' or overwrite=='y')
+
+  - name: Copying code to all hosts...
+    copy: src={{LSGI_HOME}} dest={{LSGI_PATH}}
+
+...

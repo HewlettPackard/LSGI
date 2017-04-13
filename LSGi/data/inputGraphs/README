@@ -1,0 +1,26 @@
+The input dataset for LSGi engine include the following files:
+
+1.graph (edge list+ factors) in binary format.  
+The graph file is the edge list (pair of connected vertices) and their factors. For example, the graph filename is grap8.bin. We have separated program to convert text file of the edge list to a binary code. See source/binaryConvertor. Example of edge list with factors is: vertex #1 connected to 10000 and its relation is (0,0)=0.75; (0,1) =0.25; (1,0)= 0.74;(1,1)=0.6.
+
+
+2.labels:
+The filename for the labels should contain the filename of the graph as prefix follow by .labels word, for example, grap8.bin.labels.  In the next example, we can see that vertex 1 is labeled in state 0 and 1204 and 2941 as state1. 
+The format of the file is: [vertice#] [state].
+
+
+3. Partitions size file.
+ When the engine launches N jobs, the engines requires as an input the size of vertices that are going to be processed in each node. The filename should contain the filename of the graph as prefix follow of .par. word and follow for the number of port or nodes to launch. For example, if the engine launches 1 or 8 jobs, the engine will look for the following files: graph8.par.1 or graph8.par.8. Each file should contain the same lines as the number of jobs. The summation of the partition size (an integer in each line in the file) should add up to the total number of vertices in the graph.
+
+
+
+
+
+
+
+
+
+
+
+
+

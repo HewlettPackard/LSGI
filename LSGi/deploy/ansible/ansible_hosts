@@ -1,0 +1,15 @@
+#[groupname]
+#hostname1
+#hostname2
+
+[lsgi_nodes]
+vm1-l4tm
+vm2-l4tm
+vm3-l4tm
+vm4-l4tm
+vm5-l4tm
+vm6-l4tm
+vm7-l4tm
+vm8-l4tm
+vm9-l4tm
+vm10-l4tm

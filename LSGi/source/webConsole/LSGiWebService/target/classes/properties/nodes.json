@@ -1,0 +1,49 @@
+[{
+	"id": 0,
+	"name": "1 node",
+	"value": "1",
+	"image": "Infrastructure.png",
+	"description": "The 1 node... More details about the nodes."
+},{
+	"id": 1,
+	"name": "2 nodes",
+	"value": "2",
+	"image": "Infrastructure.png",
+	"description": "The 2 nodes... More details about the nodes."
+}, {
+	"id": 2,
+	"name": "4 nodes",
+	"value": "4",
+	"image": "circular-view.svg",
+	"description": "The 4 nodes... More details about the nodes."
+}, {
+	"id": 3,
+	"name": "8 nodes",
+	"value": "8",
+	"image": "circular-view.svg",
+	"description": "The 8 nodes... More details about the nodes."
+}, {
+	"id": 4,
+	"name": "16 nodes",
+	"value": "16",
+	"image": "circular-view.svg",
+	"description": "The 16 nodes... More details about the nodes."
+}, {
+	"id": 5,
+	"name": "32 nodes",
+	"value": "32",
+	"image": "circular-view.svg",
+	"description": "The 32 nodes... More details about the nodes."
+},{
+	"id": 6,
+	"name": "40 nodes",
+	"value": "40",
+	"image": "circular-view.svg",
+	"description": "The 40 nodes... More details about the nodes."
+},{
+    "id": 7,
+    "name": "10 nodes",
+    "value": "10",
+    "image": "circular-view.svg",
+    "description": "The 10 nodes... More details about the nodes."
+}]

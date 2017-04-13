@@ -1,0 +1,1 @@
+This folder is meant to store logs from inference jobs

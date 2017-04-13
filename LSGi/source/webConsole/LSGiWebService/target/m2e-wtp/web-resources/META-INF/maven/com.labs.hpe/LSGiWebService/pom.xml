@@ -1,0 +1,135 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.labs.hpe</groupId>
+  <artifactId>LSGiWebService</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>LSGiWebService</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.version>3.2.3.RELEASE</spring.version>
+    <jackson.version>1.9.13</jackson.version>
+    <log4j.version>1.2.17</log4j.version>    
+    <jdk.version>1.7</jdk.version>    
+    <apache.version>3.4</apache.version>
+    <jsch.version>0.1.53</jsch.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  
+  	  <!-- SPRING 3  -->
+	  
+	  <!--
+	  Core utilities used by other modules.
+	  Define this if you use Spring Utility APIs (org.springframework.core.*/org.springframework.util.*)
+	-->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	<!--
+	Web application development utilities applicable to both Servlet and Portlet Environments
+	(depends on spring-core, spring-beans, spring-context)
+	Define this if you use Spring MVC, or wish to use Struts, JSF, or another web framework with Spring (org.springframework.web.*)
+	-->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	<!--
+	  Spring MVC for Servlet Environments (depends on spring-core, spring-beans, spring-context, spring-web)
+	  Define this if you use Spring MVC with a Servlet Container such as Apache Tomcat (org.springframework.web.servlet.*)
+	-->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	
+	<!-- JAVAX SERVLET -->
+	<!-- 
+	Contains a number of classes and interfaces that describe and define the contracts 
+	between a servlet class and the runtime environment provided for an instance of such a class 
+	by a conforming servlet container. 
+	-->
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>servlet-api</artifactId>
+		<version>2.5</version>
+		<scope>provided</scope>
+	</dependency>	
+	   
+	
+	<!-- JSON  -->	
+	<dependency>
+		<groupId>org.codehaus.jackson</groupId>
+		<artifactId>jackson-mapper-asl</artifactId>
+		<version>${jackson.version}</version>
+	</dependency>
+				
+	<!-- log4j -->
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>${log4j.version}</version>
+	</dependency>
+	
+	   
+	  	
+	<!-- Serialize/Deserialize -->
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang3</artifactId>
+		<version>${apache.version}</version>
+	</dependency>
+	
+	<!-- SSH library -->
+	<dependency>
+		<groupId>com.jcraft</groupId>
+		<artifactId>jsch</artifactId>
+		<version>${jsch.version}</version>
+	</dependency>
+  
+  </dependencies>
+  
+    <build>
+		<finalName>LSGiWebService</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	
+</project>

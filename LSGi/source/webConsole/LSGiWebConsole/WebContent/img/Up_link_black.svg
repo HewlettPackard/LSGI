@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#FFFFFF;}
+	.st2{display:inline;}
+	.st3{fill:#D1D3D4;}
+	.st4{display:inline;fill:none;stroke:#D1D3D4;stroke-width:0.25;stroke-miterlimit:10;}
+	.st5{fill:#221F1F;}
+</style>
+<g id="White_-_TURN_OFF" class="st0">
+	<rect x="-18" y="-18" class="st1" width="60" height="60"/>
+</g>
+<g id="Grid_-_TURN_OFF" class="st0">
+	<g class="st2">
+		<path class="st3" d="M23.7744007,0.20508v23.5693207H0.20508V0.20508H23.7744007 M24.0244007-0.04492H-0.04492v24.0693207
+			h24.0693207V-0.04492L24.0244007-0.04492z"/>
+	</g>
+	<line class="st4" x1="4" y1="23.8876991" x2="4" y2="0.1123"/>
+	<line class="st4" x1="8" y1="23.8876991" x2="8" y2="0.1123"/>
+	<line class="st4" x1="12" y1="23.8876991" x2="12" y2="0.1123"/>
+	<line class="st4" x1="16" y1="23.8876991" x2="16" y2="0.1123"/>
+	<line class="st4" x1="20" y1="23.8876991" x2="20" y2="0.1123"/>
+	<line class="st4" x1="23.8876991" y1="20" x2="0.1123" y2="20"/>
+	<line class="st4" x1="23.8876991" y1="16" x2="0.1123" y2="16"/>
+	<line class="st4" x1="23.8876991" y1="12" x2="0.1123" y2="12"/>
+	<line class="st4" x1="23.8876991" y1="8" x2="0.1123" y2="8"/>
+	<line class="st4" x1="23.8876991" y1="4" x2="0.1123" y2="4"/>
+</g>
+<g id="Title_-_TURN_OFF" class="st0">
+	<rect x="-19.7084999" y="38.8280983" style="display:inline;fill:none;" width="63.4165001" height="7.5907998"/>
+	<text transform="matrix(1 0 0 1 1.2719727 44.0288048)" class="st2" style="font-family:'Metric-Regular'; font-size:8px;">Up link</text>
+</g>
+<g id="White_Icon" class="st0">
+	<polygon class="st1" points="13,22 11,22 11,5.4141002 4.7069998,11.7069998 3.2929699,10.2930002 12,1.58594 
+		20.7070007,10.2930002 19.2929993,11.7069998 13,5.4141002 	"/>
+</g>
+<g id="Black_Icon">
+	<polygon class="st5" points="13,22 11,22 11,5.4141002 4.7069998,11.7069998 3.2929699,10.2930002 12,1.58594 
+		20.7070007,10.2930002 19.2929993,11.7069998 13,5.4141002 	"/>
+</g>
+</svg>

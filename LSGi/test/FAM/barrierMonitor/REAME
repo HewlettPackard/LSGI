@@ -1,0 +1,9 @@
+Description:
+Monitor the status of the barrier file to check if there is any bottle neck in the launch
+
+@How to  compile
+make
+@How to run
+./BarrierMonitor /dev/shm/graph8.alchemy.bin 8 1
+
+@author:tere

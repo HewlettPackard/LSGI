@@ -1,0 +1,472 @@
+.row-centered{
+	text-align:center;
+}
+.col-centered{
+	display: inline-block;
+    float: none;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+#inputDiv {
+	position: relative;
+	background-color: #F6F6F6;
+}
+
+#inputDiv > * /*:not(#launchBtnDiv)*/  { /**/
+	min-width: 15em;
+	margin: 2rem auto;
+	display: block;
+	float: unset;
+}
+
+#inputBoxes .darkBox div  {
+	background-color: #425563;
+    color: #fff; 
+     
+}
+
+#inputBoxes .darkBox .active{
+	 box-shadow: inset 0 5px 0 0 #FF8D6D;
+	 /*border-top: 5px solid #FF8D6D;*/
+}
+
+
+#buttonsDiv {
+	text-align: right;
+}
+
+#buttonsDiv > * {
+	float: unset;
+	display: inline-block;
+}
+
+#maxIterationsDiv > button {
+	 border: none;
+	 padding: 0;
+	 width: 15px;
+	 height: 15px;
+	 min-width: 0;
+	 max-width: none;
+	 font-weight: inherit;
+	 margin: 1rem 0.5rem;
+	 display: inline-block;
+ }
+
+
+/*
+#inputDiv #launchBtnDiv button {
+	float: left;
+}
+
+@media only screen and (max-width: 1300px) {
+	#inputDiv button {
+		position: relative;
+		display: block;
+		margin: 2rem auto 0px auto;
+		bottom: unset;
+	}
+}
+*/
+
+/*** Nav ***/
+
+.nav > div > div {
+	cursor: pointer;
+	background-color: #FFF;
+	padding: 5px;
+}
+
+.nav .active {
+	box-shadow: inset 0 5px 0 0 #425563;
+	/*border-top: 5px solid #425563;*/
+}
+
+.nav img {
+	display: inline-block;
+	max-height: 2.5rem;
+}
+
+.nav .caption {
+	display: block;/*inline-block*/
+	font-size: 1.2rem;
+	font-weight: unset;
+	padding-bottom: 1rem;
+}
+
+.nav .caption > * {
+	font-weight:bold;
+}
+
+@media only screen and (max-width: 995px) {
+	.nav {
+		display: table;
+	}
+
+	.nav > * {
+		display: table-cell;
+		width: 10%;
+		vertical-align: top;
+		background-color: #FFF;
+	}
+
+	.nav img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.nav .caption {
+		height: 5rem; /*3rem;*/
+	}
+}
+
+/*** Carousel ***/
+
+.carousel-inner {
+    background-color: #FFF;
+    min-height: 180px;
+}
+
+.carousel-inner > .item {
+	/*height:180px;*/
+}
+
+.carousel-inner > .item.active {
+    display: inline-table;
+}
+
+.carousel-inner > .item > * {
+	display: table-cell;/*inline-block*/
+	float: unset;
+	vertical-align: middle;
+}
+
+.carousel-indicators {
+  bottom: -20px;
+}
+
+.carousel-indicators li{
+	background-color: #d6d6d6;
+	border-radius: 0px;
+	width: 12px;
+	height: 12px;
+	margin: auto 3px;
+}
+
+.carousel-indicators li.active{
+	width: 14px;
+	height: 14px;
+	background-color: #01a982;
+}
+
+.caption {
+	font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.carousel-control {
+	width: 3rem;
+}
+
+.carousel-control.left {
+	left: -5rem;
+	background-image: none;
+}
+
+.carousel-control.right {
+	right: -5rem;
+  background-image: none;
+}
+
+.carousel-control .arrow {
+		background-image: url("../img/bg-carousel-paddle.png");
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 5rem;
+		margin-top: 2.5rem;
+}
+
+.carousel-control.left .arrow {
+		background-position: 0 100%;
+}
+
+.carousel-control.right .arrow {
+		background-position: 0 -10%;
+}
+
+.carousel .image-wrapper img {
+	height: 8rem;
+}
+.carousel .image-wrapper .caption {
+	margin-top: -1rem;
+}
+
+.carousel .description , .carousel .action {
+	/*padding-top: 3rem;*/
+	font-size: 20px;
+	/*max-width: 25rem;*/
+}
+
+.carousel .action {
+	cursor: pointer;
+}
+
+.carousel .action .glyphicon {
+	padding: 0.2rem;
+	margin-right: 0.3rem;
+	color: white;
+	background-color: #01A982;
+	border-radius: 100%;
+	font-size: 0.9rem;
+}
+
+.carousel .action:hover .glyphicon {
+	background-color: #707070;
+}
+
+@media only screen and (max-width: 995px) {
+	.carousel .item {
+		height: auto;
+	}
+
+	.carousel .item > * {
+		display: block;
+	}
+
+	.carousel .item .description {
+		/*max-width: unset;*/
+		padding: 2rem; /*padding-bottom: 3rem;*/
+	}
+
+	.carousel .item .action {
+		padding-bottom: 3rem;
+	}
+
+	.carousel-control.left {
+		left: 1rem;
+	}
+
+	.carousel-control.right {
+		right: 0rem;
+	}
+}
+
+#environmentDiv .carousel{
+	/* background: white; For browsers that do not support gradients
+    background: -webkit-radial-gradient(rgba(42, 210, 201,0.5), rgba(255,255,255,1)1%, rgba(42, 210, 201,0.5)); Safari 5.1 to 6.0
+    background: -o-radial-gradient(rgba(42, 210, 201,0.5), rgba(255,255,255,1)1%, rgba(42, 210, 201,0.5)); For Opera 11.6 to 12.0
+    background: -moz-radial-gradient(rgba(42, 210, 201,0.5), rgba(255,255,255,1)1%, rgba(42, 210, 201,0.5)); For Firefox 3.6 to 15
+    background: radial-gradient(rgba(42, 210, 201,0.5),rgba(255,255,255,1)1%,rgba(42, 210, 201,0.5)); Standard syntax (must be last) */
+
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px #c0c0c0;
+    /* border: 1px #2AD2C9 solid; */
+}
+
+
+#datasetDiv .carousel{
+	border-radius: 3px;
+    box-shadow: 1px 1px 5px #c0c0c0;
+    /* border: 1px #FF8D6D solid; */
+}
+
+
+#nodesDiv .carousel{
+	border-radius: 3px;
+    box-shadow: 1px 1px 5px #c0c0c0;
+    /* border: 1px #614767 solid; */
+}
+/******/
+
+.button{
+	line-height: 15px !important;
+    min-width: 100px !important;
+	margin: 0px 10px;
+}
+
+/*** Loading **/
+#loadingDiv{
+	background-color: #F6F6F6;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+/*** Statistics ***/
+#statisticsDiv{
+	background-color: #F6F6F6;	
+	padding: 15px;
+	font-size: 1.3rem;
+	font-weight: bold;
+	/* margin-bottom: 70px; */
+}
+
+.statsBox{
+	border: 1px solid #c6c9ca;
+	background-color: #fff;
+    /*border-top: 5px solid #FF8D6D;*/
+    /*margin-right: 0.2rem;*/
+    transition: width 0.3s ease 0.5s;
+    /*min-height: 130px;*/
+    padding-bottom: 10px;
+    
+}
+
+.statsBox .number{
+	/*font-family: SimpleWeb-Regular;
+	font-size: 1.5rem;
+	font-weight: bold;*/
+}
+
+.statsBox.darkBox, .statsBox.darkBox div  {
+	background-color: #425563;
+    color: #fff;      
+}
+
+.statsBox.darkBox .active .purple{
+	 box-shadow: inset 0 5px 0 0 #FF8D6D;
+	 /*border-top: 5px solid #FF8D6D;*/
+}
+
+
+/*** Inference results ***/
+#boxesDiv img{
+	max-height: 1.5rem;
+}
+
+.resultBox{
+	border: 1px solid #c6c9ca;
+    border-top: 5px solid #2AD2C9;
+    margin-right: 0.2rem;
+    transition: width 0.3s ease 0.5s;
+    min-height: 130px;
+    background-color: #fff;
+}
+
+.resultBox .titleText{
+	font-size: 1.3rem;
+}
+
+.resultBox .resText{
+	font-size: 2.5rem;
+	text-align: center;
+	padding-top: 2rem;
+}
+
+.resultBox.darkBox, .resultBox.darkBox div  {
+	background-color: #425563;
+    color: #fff;
+}
+
+/*** Gauge chart ***/
+.chart-filled{
+	fill: steelblue;
+}
+.chart-empty{
+	fill: #dedede;
+}
+.needle, .needle-center{
+	fill: #464A4F;
+}
+
+
+
+
+/*** Time bar ***/
+#timeBar {
+	font-weight: bold;
+}
+
+#timeBar .progress{
+	border-radius: 0px;
+	padding: 0px;
+	display: inline-block;
+	float: left;
+	background-color: #01a982;
+}
+
+#timeBar .progress.active{
+	background-color: #01a982;
+}
+
+
+/*** BarChart ***/
+.bar {
+	cursor: pointer;
+  	fill: #617c91;
+}
+
+.bar:hover {
+  fill-opacity: 0.7; /* fill: #01a982 */
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+/******/
+
+/*** Stacked bar chart ***/
+.stateChartlegend{
+	width: 15px;
+	height:15px;
+	margin: 5px;
+	float: left;
+}
+
+.stateChartlegend.state0{
+	background-color: #2AD2C9;
+}
+
+.stateChartlegend.state1{
+	background-color: #617c91;
+}
+
+#stateChart .state0-bar {
+  fill: #2AD2C9;
+}
+
+#stateChart .state1-bar {
+  fill: #617c91;
+}
+/*********/
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.title input {
+	height: 30px;
+	width: 100px;
+	margin-right: 5px;
+	padding: 0px;
+	text-align: center;
+	-moz-appearance: textfield;
+}
+
+.title input:focus {
+    padding: unset;
+}
+
+/*** JSON Textbox ***/
+.json{
+	width:100%;
+	min-height:30rem;
+}
+
+button:disabled {
+    background: #dddddd;
+    opacity: 0.3;
+}

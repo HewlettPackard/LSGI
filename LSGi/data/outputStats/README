@@ -1,0 +1,13 @@
+This folder will store output results for the  inference:
+*.timer = times and performance statistics
+*.conv  = convergence results
+*.tsv	= final states for the inference
+
+The output filenames are created using the name specified in the configuration file used when the inference runs.
+The configuration files are in:  ../config/configure*  
+#example of configutaion file
+#2,2000,../../data/outputStats/outg8,1,10,0.03
+then the output file names will be generated as outg8*.conv, outg8*.timer, and outg8.tsv.
+
+@AUTHOR: Tere
+@DAte: July 5, 2015

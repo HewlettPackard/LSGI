@@ -1,0 +1,88 @@
+[{
+        "id": 0,
+        "name": "1 Billion Vertices",
+        "value": "/data/inputGraphs/largeDataset/gV1000M.bin",
+        "image": "Big_data.png",
+        "pollingTime": 48000,
+        "loadingTime": 4000,
+        "description": "The 1 billion vertex graph with 3.3 billion edges.. More details about the dataset.",
+        "graphlabTime": -1,
+        "queryServicePort": 58000,
+        "statistics": {
+                "vertices": 1000000000,
+                "edges": 3392337264,
+                "s0": 429382,
+                "s1": 278726,
+                "labels": 708108
+        }
+},{
+        "id": 1,
+        "name": "200 Million Vertices",
+        "value": "/data/inputGraphs/largeDataset/gV200M.bin",
+        "image": "resources.svg",
+        "pollingTime": 16000,
+        "loadingTime": 2000,
+        "description": "The 200 million dataset with 6O0 million edges..  More details about the dataset.",
+        "graphlabTime": 77,
+        "queryServicePort": 58001,
+        "statistics": {
+                "vertices": 200000000,
+                "edges": 662942059,
+                "s0": 429382,
+                "s1": 278726,
+                "labels": 708108
+        }
+},{
+        "id": 2,
+        "name": "20 Million Vertices",
+        "value": "/data/inputGraphs/largeDataset/gV20M.bin",
+        "image": "resources.svg",
+        "pollingTime": 64000,
+        "loadingTime": 4000,
+        "description": "The 20 million dataset with 55 million edges  More details about the dataset.",
+        "graphlabTime": 8.8,
+        "queryServicePort": 58002,
+        "statistics": {
+                "vertices": 20000000,
+                "edges": 55912986,
+                "s0": 429382,
+                "s1": 278726,
+                "labels": 708108
+        }
+
+},{
+        "id": 3,
+        "name": "2 Million Vertices",
+        "value": "/data/inputGraphs/dns_graph.alchemy.factors.bin",
+        "image": "resources.svg",
+        "pollingTime": 1000,
+        "loadingTime": 500,
+        "description": "The 2 million dataset with 12 million edges. More details about the dataset.",
+        "graphlabTime": 0,
+        "queryServicePort": 58003,
+        "statistics": {
+                "vertices": 2077057,
+                "edges": 12700864,
+                "s0": 429382,
+                "s1": 278726,
+                "labels": 708108
+        }
+},{
+        "id": 4,
+        "name": "40 Vertices",
+        "value": "/data/inputGraphs/g40/graph40.alchemy.bin",
+        "image": "resources.svg",
+        "pollingTime": 1000,
+        "loadingTime": 1000,
+        "description": "The 40-vertices dataset... More details about the dataset.",
+        "graphlabTime": 0,
+        "queryServicePort": 58004,
+        "statistics": {
+                "vertices": 40,
+                "edges": 10,
+                "s0": 4,
+                "s1": 3,
+                "labels": 0
+        }
+}]
+        

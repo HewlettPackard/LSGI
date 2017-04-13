@@ -1,0 +1,55 @@
+#Binary Generator
+@author: tere
+@aug 2016
+Description:
+This program converts text file-alchemy based  to binary format used in LSGI,
+The progam Takes an alchemy input file and convert it to binary format to speed up the loading time of the data.
+The program also reads the binary to verify if the convertion is correct.
+
+@how to compile:
+make clena
+make
+
+@parameters:
+./binaryConvertor <input alchemy file> <0=alchemy, 1=edgelist only>[
+
+1. 0 input file name in alchemy format
+2. 0 input edge list file
+
+@Alchemy format
+Ref:
+https://github.com/jegonzal/PowerGraph/blob/master/toolkits/graphical_models/deprecated/gibbs_sampling/README
+Alchemy Factor Graph Format:
+
+The Alchemy factor graph form was developed in collaboration with the
+Alchemy team (http://alchemy.cs.washington.edu/) at the University of
+Washington.  The format describes a discrete factorized model as a
+text file with the following form:
+
+   variables:
+   <varid>\t<nstates>
+    ...
+   factors:
+   <varid> / <varid> / ... / <varid> // <logP(0, 0, ..., 0)> <logP(1, 0, ..., 0)> ...
+
+
+@edge list format with factors
+0 / 1 // -0.67334 -0.71334 -1.38629 -0.20
+0 / 2 // -0.67334 -0.71334 -1.38629 -0.10
+
+
+
+@how to run it
+example:
+./binaryConvertor testCase/graph1.alchemy 0
+
+or 
+
+
+./binaryConvertor testCase/graph1_3.edgeonly 1
+
+
+
+@Output:
+it will generete a file with the same input file name with a posfix of ".bin".
+

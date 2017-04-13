@@ -1,0 +1,1 @@
+java -classpath ./src/main/java/ com.labs.hpe.service.QueryClient 1 $1 localhost 58000
