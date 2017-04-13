@@ -16,12 +16,12 @@ associated with a state variable. The state variable is updated iteratively base
 vertices as well as the metadata associated with the graph until convergence is achieved.
 
 ### Main Contributors 
-Fei Chen, Tere Gonzalez, Krishna Viswanathan, Hernan Laffite, Quiong Cai, Janneth Rivera
+Fei Chen, Maria Teresa(Tere) Gonzalez Diaz, Krishna Viswanathan, Hernan Laffite, Quiong Cai, Janneth Rivera
 
 ### Acknowledgements
 We thank our colleagues Brad Morrey, Terence Kelly, Hideaki Kumura, Jun Li and Rob Schneider for their support understanding memory mappings, libpmem library interfaces, and CPU optimization techniques.  Thanks to Qiong Cai who developed the model to estimate performance on The Machine based on performance on SuperdomeX statistics. Thanks to Greg Pearson and Alex Jizrawi for testing and evaluating LSGi on The Machine Fabric Test bed(MFT) and The Machine Simulator(TMAS). Thanks to Ram Swaminathan, April Mitchel and Sharad Singhal for their management support.
 
-### How TO..
+### How To..
 We have included extensive documentation and demo examples to evaluate LSGi System on dummy datasets. Please refer to document folder to see further details.
 
 ### References 
