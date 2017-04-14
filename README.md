@@ -29,7 +29,7 @@ We have included extensive documentation and demo examples to evaluate LSGi Syst
 URL:https://www.labs.hpe.com/publications/HPE-2016-101"
 
 ### More Info
-- LSGi System Architeture
+- LSGi System Architeture: [see](docs/LSGiSystemArch.pdf)
 - Demo Video
 
 ### License
