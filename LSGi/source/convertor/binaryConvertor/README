@@ -7,7 +7,7 @@ The progam Takes an alchemy input file and convert it to binary format to speed 
 The program also reads the binary to verify if the convertion is correct.
 
 @how to compile:
-make clena
+make clean
 make
 
 @parameters:
